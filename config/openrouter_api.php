@@ -1,6 +1,6 @@
 <?php
 function queryDeepSeek($prompt) {
-    $apiKey = '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'; 
+    $apiKey = 'OPENROUTER_API_KEY=your_new_api_key_here'; 
     $url = 'https://openrouter.ai/api/v1/chat/completions';
 
     $headers = [
