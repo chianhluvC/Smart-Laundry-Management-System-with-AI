@@ -1,0 +1,153 @@
+/* CSS độc lập cho form chỉnh sửa khách hàng */
+.customer-edit-section {
+    --primary-color: #4361ee;
+    --primary-hover: #3a56d4;
+    --secondary-color: #e9ecef;
+    --text-color: #212529;
+    --light-gray: #f8f9fa;
+    --border-color: #dee2e6;
+    --success-color: #2ecc71;
+    --danger-color: #e74c3c;
+    --shadow: rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Container form khách hàng */
+  .customer-edit-section .container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px var(--shadow);
+  }
+  
+  /* Tiêu đề form */
+  .customer-edit-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 10px;
+  }
+  
+  .customer-edit-section h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
+  }
+  
+  /* Form styling */
+  .customer-edit-section .form-label {
+    font-weight: 500;
+    color: #495057;
+    margin-bottom: 0.5rem;
+  }
+  
+  .customer-edit-section .form-control {
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 12px 15px;
+    transition: all 0.3s ease;
+    background-color: var(--light-gray);
+  }
+  
+  .customer-edit-section .form-control:focus {
+    box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.25);
+    border-color: var(--primary-color);
+    outline: none;
+  }
+  
+  .customer-edit-section .mb-3 {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Button styling */
+  .customer-edit-section .btn {
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .customer-edit-section .btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .customer-edit-section .btn-primary:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(67, 97, 238, 0.3);
+  }
+  
+  .customer-edit-section .btn-secondary {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    margin-left: 10px;
+  }
+  
+  .customer-edit-section .btn-secondary:hover {
+    background-color: #dae0e5;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Error messages */
+  .customer-edit-section .error-message {
+    color: var(--danger-color);
+    background-color: rgba(231, 76, 60, 0.1);
+    border-left: 3px solid var(--danger-color);
+    padding: 10px 15px;
+    margin-bottom: 1.5rem;
+    border-radius: 0 6px 6px 0;
+  }
+  
+  /* Success messages */
+  .customer-edit-section .success-message {
+    color: var(--success-color);
+    background-color: rgba(46, 204, 113, 0.1);
+    border-left: 3px solid var(--success-color);
+    padding: 10px 15px;
+    margin-bottom: 1.5rem;
+    border-radius: 0 6px 6px 0;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .customer-edit-section .container {
+      padding: 1.5rem;
+      margin: 1rem;
+    }
+    
+    .customer-edit-section .btn {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    
+    .customer-edit-section .btn-secondary {
+      margin-left: 0;
+    }
+  }
+  
+  /* Input field animation */
+  .customer-edit-section .form-control:focus {
+    animation: customer-input-pulse 1s;
+  }
+  
+  @keyframes customer-input-pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(67, 97, 238, 0.4);
+    }
+    70% {
+      box-shadow: 0 0 0 5px rgba(67, 97, 238, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(67, 97, 238, 0);
+    }
+  }
